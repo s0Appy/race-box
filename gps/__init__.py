@@ -1,6 +1,6 @@
-
-# gps/__init__.py
+# __init__.py
 from .gps_reader import GPSReader
-from . import config
+from .gps_config import set_rate_5hz
 
-__all__ = ["GPSReader", "config"]
+__all__ = ["GPSReader", "set_rate_5hz"]
+
