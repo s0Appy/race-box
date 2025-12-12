@@ -39,7 +39,7 @@ def set_rate_5hz():
     msg.extend(ck)
     ser.write(msg)
     time.sleep(0.2)
-    print("✔ Set GPS output rate to 5 Hz")
+    print("✔ Set GPS output rate to 5 Hz") 
 
 
 # Optional: disable all but GGA/RMC
