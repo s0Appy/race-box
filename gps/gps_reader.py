@@ -42,8 +42,6 @@ class GPSReader(Thread):
                 if not line.startswith("$GPRMC"):
                     continue
 
-                print("lock found")
-
                 msg = pynmea2.parse(line)
 
                 # Only log valid fixes
