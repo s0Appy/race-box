@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from threading import Thread
 from queue import Queue
 
-from .gps_config import set_rate_5hz
+from .gps_config import set_rate_10hz
 
 
 class GPSReader(Thread):
@@ -25,7 +25,7 @@ class GPSReader(Thread):
 
         self.ser = serial.Serial(self.port, self.baud, timeout=1)
         # Configure GPS update rate once at startup
-        set_rate_5hz(self.ser)
+        set_rate_10hz(self.ser)
 
     def stop(self):
         self._running = False
